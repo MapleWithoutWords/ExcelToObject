@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="../../common.props" />
+	<PropertyGroup>
+		<TargetFramework>$(TargetFramework)</TargetFramework>
+		<Nullable>enable</Nullable>
+		<Version>$(Version)</Version>
+		<PackageId>ExcelToObject.Core</PackageId>
+		<Authors>$(Authors)</Authors>
+		<Product>$(Product)</Product>
+		<Description>$(Description)</Description>
+		<PackageIcon>logo_core.png</PackageIcon>
+		<PackageProjectUrl>$(PackageProjectUrl)</PackageProjectUrl>
+		<GeneratePackageOnBuild>$(GeneratePackageOnBuild)</GeneratePackageOnBuild>
+		<PackageLicenseUrl>../../LICENSE</PackageLicenseUrl>
+		<Title>ExcelToObject.Core</Title>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Update="logo_core.png">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="logo_core.png" Pack="true" PackagePath="" />
+	</ItemGroup>
+
+</Project>

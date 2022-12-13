@@ -1,12 +1,9 @@
 # ExcelToObject
 
-#### 介绍
-ExcelToObject，让操作excel像操作对象那么简单
+#### Description
+ExcelToObject，Make operating excel as simple as operating objects.
 
-
-#### 安装教程
-
-​	
+#### Installation
 
 ```shell
 dotnet add package ExcelToObject.Npoi --version 1.0.0
@@ -14,21 +11,21 @@ dotnet add package ExcelToObject.Npoi --version 1.0.0
 
 
 
-#### 使用说明
+#### Instructions
 
-1.  Web程序在Program或Startup中添加以下代码
+1.  The Web program adds the following code to the Program or Startup
 
 ```c#
 service.AddExcelToObjectNpoiService();
 ```
 
-2. 控制台程序
+2. Console Application
 
 ```
 IExcelFactory _excelFactory=new NpoiExcelFactory();
 ```
 
-3. 读取excel中一个Sheet页为列表
+3. Read a sheet in excel as a list
 
 ```c#
 using (var excelAppService = _excelFactory.Create(System.IO.File.Open("./files/Test.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite)))
@@ -41,7 +38,7 @@ using (var excelAppService = _excelFactory.Create(System.IO.File.Open("./files/T
 }
 ```
 
-4. 读取excel中一个Sheet页为单个对象
+4. Read a sheet in Excel as a single object
 
 ```c#
 using (var excelAppService = _excelFactory.Create(System.IO.File.Open("./files/Test.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite)))
@@ -51,7 +48,7 @@ using (var excelAppService = _excelFactory.Create(System.IO.File.Open("./files/T
 }
 ```
 
-5. 写入一个list对象到excel的Sheet页
+5. Write a list object to the Excel Sheet page
 
 ```c#
 using (var excelAppService = _excelFactory.Create(System.IO.File.Open("./files/Test.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite)))
@@ -61,7 +58,7 @@ using (var excelAppService = _excelFactory.Create(System.IO.File.Open("./files/T
 }
 ```
 
-5. 写入一个对象到excel的sheet页
+6. Write an object to the excel sheet page
 
 ```c#
 using (var excelAppService = _excelFactory.Create(System.IO.File.Open("./files/Test.xlsx", FileMode.OpenOrCreate, FileAccess.ReadWrite)))
@@ -73,18 +70,17 @@ using (var excelAppService = _excelFactory.Create(System.IO.File.Open("./files/T
 
 
 
-#### 原理
+#### Principle
 
 ![image-20221207000351142](.\doc\images\image-20221207000351142.png)
 
-1. 通过excel的名称管理器，与实体的属性名称匹配起来
-2. 通过传入的实体，获取实体属性。找出sheetName中的名称管理器，每个名称的坐标。进行读取。
+1. Match with the attribute name of the entity through the name manager of Excel
+2. Get entity attributes through the passed in entity. Find out the name manager in sheetName and the coordinates of each name. Read.
 
 
+#### Contribution
 
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+1.  Fork the repository
+2.  Create Feat_xxx branch
+3.  Commit your code
+4.  Create Pull Request
