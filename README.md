@@ -75,7 +75,7 @@ using (var excelAppService = _excelFactory.Create(System.IO.File.Open("./files/T
 
 #### 原理
 
-![image-20221207000351142](.\doc\images\image-20221207000351142.png)
+![image-20221207000351142](./doc/images/image-20221207000351142.png)
 
 1. 通过excel的名称管理器，与实体的属性名称匹配起来
 2. 通过传入的实体，获取实体属性。找出sheetName中的名称管理器，每个名称的坐标。进行读取。
